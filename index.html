@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribe | AI Voice Transcription</title>
+    <!-- Use Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <div class="blob shape-1"></div>
+    <div class="blob shape-2"></div>
+    <div class="blob shape-3"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-microphone-lines"></i>
+                <h1>Scribe.ai</h1>
+            </div>
+            <p class="subtitle">Next-gen speech recognition in your browser</p>
+        </header>
+
+        <div class="glass-card main-interface">
+            <div class="status-indicator">
+                <div class="dot" id="status-dot"></div>
+                <span id="status-text">Ready to Record</span>
+            </div>
+
+            <div class="actions">
+                <button class="btn primary-btn" id="record-btn">
+                    <i class="fa-solid fa-microphone"></i>
+                    <span id="record-btn-text">Start Recording</span>
+                </button>
+            </div>
+
+            <div class="visualizer" id="visualizer-container">
+                <!-- Visualizer bars injected via CSS animation -->
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <div class="output-container" id="output-container">
+                <h3 class="output-title">Transcription Result</h3>
+                <div class="output-box" id="transcription-output">
+                    <p class="placeholder-text">Your transcribed text will appear here...</p>
+                </div>
+            </div>
+
+            <div class="loader" id="loader">
+                <div class="spinner"></div>
+                <p>Analyzing Speech...</p>
+            </div>
+            
+            <div class="error-box" id="error-box"></div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
